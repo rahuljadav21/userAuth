@@ -1,4 +1,5 @@
 const mongoose =require('mongoose');
+//Save your MONGO_URI in config.env file in config directory
 const connectDB = async()=>{
     try{
         const conn = await mongoose.connect(process.env.MONGO_URI,{
