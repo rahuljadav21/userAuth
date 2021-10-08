@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome <% if(user) { %>
+      <%=user.username %>
+    <% }else{%>
+        Guest 
+        <% } %>
+     </h1>
+     <% if(user) { %>
+        <form action="/user/logout" method="post">
+         <button type="submit">Logout</button>
+        </form> 
+      <% }else{%>
+        <a href="/user/login"><h3>Login</h3></a>
+          <% } %>
+    
+    <a href="/user/register"><h3>Register</h3></a>
+    
+    <a href="/user/secret"><h3>Secret Info</h3></a>
+</body>
+</html>
